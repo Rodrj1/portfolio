@@ -1,7 +1,7 @@
 import "./style.scss";
 
 let projectId = 1;
-const maxProjects = 4;
+const maxProjects = 6;
 
 const projectAmount = document.getElementById("projectAmount");
 
