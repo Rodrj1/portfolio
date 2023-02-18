@@ -1,12 +1,12 @@
 import "./style.scss";
 
 let projectId = 1;
-const maxProjects = 6;
+const maxProjects = 7;
 
-const projectAmount = document.getElementById("projectAmount");
+const projectSlider = document.getElementById("projectSlider");
 
 const updateProjectNumber = () => {
-  if (projectAmount) projectAmount.innerText = `${projectId}/${maxProjects}`;
+  if (projectSlider) projectSlider.innerText = `${projectId}/${maxProjects}`;
 };
 updateProjectNumber();
 
