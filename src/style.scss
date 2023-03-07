@@ -168,7 +168,7 @@ span {
       margin: 0px auto;
       gap: 20px;
       min-height: 59vh;
-      width: 80%;
+      width: 85%;
       transition: all 0.5s;
 
       .projectTechs {
@@ -213,20 +213,33 @@ span {
           flex-direction: column;
           gap: 10px 0px;
           height: auto;
-          border: 3px solid #212f45;
-          border-radius: 10px;
+          border-radius: 0px;
           padding: 0px 10px;
           width: 100%;
           background-color: var(--navy-lighter);
           transition: all 0.2s;
 
-          img {
-            object-fit: cover;
-            object-position: center top;
+          .imageContainer {
+            z-index: 200;
             height: 350px;
             width: 90%;
-            border: 2px dashed var(--navy);
             margin-bottom: 10px;
+            background-color: var(--navy);
+            img {
+              opacity: 0.3;
+              object-fit: cover;
+              object-position: center top;
+              height: 350px;
+              width: 100%;
+              border: 2px solid var(--navy);
+              margin-bottom: 10px;
+              position: relative;
+              transition: 0.2s;
+
+              &:hover {
+                opacity: 0.7;
+              }
+            }
           }
         }
       }
@@ -373,9 +386,11 @@ button.hidden {
               min-height: 30px;
               font-weight: 700;
             }
-
-            img {
+            .imageContainer {
               display: none;
+              img {
+                display: none;
+              }
             }
           }
         }
@@ -442,8 +457,11 @@ button.hidden {
           text-align: left;
 
           .projectImage {
-            img {
+            .imageContainer {
               display: none;
+              img {
+                display: none;
+              }
             }
           }
         }
